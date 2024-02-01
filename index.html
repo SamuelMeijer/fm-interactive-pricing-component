@@ -9,12 +9,40 @@
   <body>
     <main id="app">
       <header>
-        <h1>Simple, Traffic-based pricing</h1>
+        <h1>Simple, traffic-based pricing</h1>
         <p>Sign-up for our 30-day trail. No credit card required.</p>
       </header>
 
-      <section id="cta">
-        <input type="range" name="priceDecider" id="priceDecider">
+      <section id="PricingComponent">
+        <div id="PriceDecider">
+          <div class="TopText">
+            <p>100K PAGEVIEWS</p>
+            <p><em>$16.00</em>/month</p>
+          </div>
+          <input
+            type="range"
+            name="priceDeciderSlider"
+            id="priceDeciderSlider"
+          />
+          <div class="BillingOption">
+            <p>Monthly billing</p>
+            <input
+              type="range"
+              name="billingOptionSlider"
+              id="billingOptionSlider"
+              max="1"
+            />
+            <p>Yearly billing</p>
+          </div>
+        </div>
+        <div id="Cta">
+          <ul class="CtaList">
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <button class="CtaButton">Start my trial</button>
+        </div>
       </section>
     </main>
     <script type="module" src="/main.js"></script>
