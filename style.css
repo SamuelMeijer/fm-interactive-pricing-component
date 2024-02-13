@@ -117,6 +117,87 @@ header p {
   font-weight: 800;
 }
 
+/**** RESETING INPUT-RANGE-ELEMENT TO REMOVE INCONSISTENCIES BETWEEN BROWSERS  ***/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+
+  cursor: pointer;
+  width: 400px;
+}
+
+/** STYLING THE TRACK **/
+/* ::webkit => Chrome, Safari, Opera, Edge */
+input[type="range"]::-webkit-slider-runnable-track {
+  /* REQUIRED */
+  background: coral;
+  height: 1rem;
+
+  /* OPTIONAL */
+  border-radius: 2rem;
+}
+/* ::moz => Firefox */
+input[type="range"]::-moz-range-track {
+  /* REQUIRED */
+  background: coral;
+  height: 1rem;
+
+  /* OPTIONAL */
+  border-radius: 2rem;
+}
+
+/** STYLING THE THUMB **/
+/* ::webkit => Chrome, Safari, Opera, Edge */
+input[type="range"]::-webkit-slider-thumb {
+  /* REMOVES DEFAULT */
+  -webkit-appearance: none;
+  appearance: none;
+  /* ADDING CUSTOM VALUES */
+  height: 10px;
+  width: 10px;
+  background-color: red;
+
+  /* CENTERING THUMB ON THE TRACK */
+  /* FORMULA: margin-top = (track height in pixels / 2) - (thumb height in pixels /2) */
+  margin-top: calc(calc(16px / 2) - calc(10px / 2));
+}
+
+/* ::moz => Firefox */
+input[type="range"]::-moz-range-thumb {
+  /* REMOVES DEFAULT */
+  -webkit-appearance: none;
+  appearance: none;
+  /* ADDING CUSTOM VALUES */
+  height: 10px;
+  width: 10px;
+  background-color: red;
+
+  /* REMOVES DEFAULT BORDER AND BORDER-RADIUS */
+  border: none;
+  border-radius: 0;
+}
+
+/** FIXING FOCUS-STATE STYLING  **/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/* ::webkit => Chrome, Safari, Opera, Edge */
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+/* ::moz => Firefox */
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
 #priceDeciderSlider {
   width: 100%;
   margin: 3rem 0;
@@ -174,4 +255,8 @@ header p {
 
   background-color: var(--dark-desaturated-blue);
   color: var(--pale-blue);
+}
+
+.CtaButton:hover {
+  cursor: pointer;
 }
