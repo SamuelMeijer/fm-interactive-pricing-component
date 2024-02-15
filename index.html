@@ -18,20 +18,27 @@
             <p>100K PAGEVIEWS</p>
             <p><em>$16.00</em>/month</p>
           </div>
+          <!-- TODO: Set bg color depending on value of slider to be either soft-cyan or grey -->
           <input
             type="range"
             name="priceDeciderSlider"
             id="priceDeciderSlider"
           />
           <div class="BillingOption">
-            <p>Monthly billing</p>
+            <label for="billingOptionMonthly">Monthly billing</label>
             <input
-              type="range"
-              name="billingOptionSlider"
-              id="billingOptionSlider"
-              max="1"
+              type="radio"
+              name="billingOption"
+              id="billingOptionMonthly"
+              checked
             />
-            <p>Yearly billing</p>
+
+            <input
+              type="radio"
+              name="billingOption"
+              id="billingOptionYearly"
+            />
+            <label for="billingOptionYearly">Yearly billing</label>
             <p>25% discount</p>
           </div>
         </div>
