@@ -49,7 +49,7 @@ body {
   place-items: center;
 
   background: url(./images/bg-pattern.svg) no-repeat;
-  background-size: 100v2 50vh;
+  background-size: 100vw 50vh;
   background-color: var(--very-pale-blue);
 }
 
