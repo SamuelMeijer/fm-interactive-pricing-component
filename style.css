@@ -49,7 +49,7 @@ body {
   place-items: center;
 
   background: url(./images/bg-pattern.svg) no-repeat;
-  background-size: contain;
+  background-size: 100v2 50vh;
   background-color: var(--very-pale-blue);
 }
 
@@ -99,7 +99,7 @@ header p {
 
   color: var(--grayish-blue);
 
-  border-bottom: 1px solid var(--light-grayish-blue);
+  border-bottom: 2px solid var(--light-grayish-blue);
 }
 
 .TopText {
@@ -111,10 +111,12 @@ header p {
 }
 
 .TopText em {
+  padding-right: 0.15rem;
   vertical-align: middle;
   color: var(--dark-desaturated-blue);
   font-size: 2.6rem;
   font-weight: 800;
+  letter-spacing: normal;
 }
 
 /**** RESETING INPUT-RANGE-ELEMENT TO REMOVE INCONSISTENCIES BETWEEN BROWSERS  ***/
@@ -132,7 +134,7 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-runnable-track {
   /* REQUIRED */
   background: var(--soft-cyan);
-  height: 1rem;
+  height: 0.5rem;
 
   /* OPTIONAL */
   border-radius: 2rem;
@@ -141,7 +143,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 input[type="range"]::-moz-range-track {
   /* REQUIRED */
   background: var(--soft-cyan);
-  height: 1rem;
+  height: 0.5rem;
 
   /* OPTIONAL */
   border-radius: 2rem;
@@ -154,8 +156,8 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   /* ADDING CUSTOM VALUES */
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 25px;
   background-image: url(./images/icon-slider.svg);
   background-repeat: no-repeat;
@@ -165,7 +167,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   /* CENTERING THUMB ON THE TRACK */
   /* FORMULA: margin-top = (track height in pixels / 2) - (thumb height in pixels /2) */
-  margin-top: calc(calc(16px / 2) - calc(50px / 2));
+  margin-top: calc(calc(0.5rem / 2) - calc(40px / 2));
 }
 
 /* ::moz => Firefox */
@@ -174,8 +176,8 @@ input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
   appearance: none;
   /* ADDING CUSTOM VALUES */
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   border-radius: 25px;
   background-image: url(./images/icon-slider.svg);
   background-repeat: no-repeat;
@@ -220,7 +222,8 @@ input[type="range"]:focus::-moz-range-thumb {
   align-items: center;
 }
 
-.BillingOption p {
+.BillingOption p,
+.BillingOption label {
   padding: 0 0.5rem;
 }
 
