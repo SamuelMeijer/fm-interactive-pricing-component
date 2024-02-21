@@ -217,6 +217,7 @@ input[type="range"]:focus::-moz-range-thumb {
 
 .BillingOption {
   width: 100%;
+  height: 24px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -234,8 +235,55 @@ input[type="range"]:focus::-moz-range-thumb {
   color: var(--light-red);
 }
 
-#billingOptionSlider {
+.BillingOptionToggler {
   width: 50px;
+  height: 100%;
+  position: relative;
+}
+
+.BillingOptionToggler input[type="radio"] {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+.BillingOptionToggler input[type="radio"]:first-of-type {
+  left: 0;
+}
+
+.BillingOptionToggler input[type="radio"]:last-of-type {
+  right: 0;
+}
+
+.BillingOptionTogglerTrack {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+  /* TODO: REMOVE */
+  background-color: red;
+}
+
+.BillingOptionTogglerThumb {
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  /* Make dynamic depending on selection */
+  left: 0;
+
+  z-index: 2;
+  /* Make dynamic depending on selection */
+  background-color: coral;
 }
 
 #Cta {

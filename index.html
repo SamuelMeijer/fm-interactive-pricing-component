@@ -26,18 +26,21 @@
           />
           <div class="BillingOption">
             <label for="billingOptionMonthly">Monthly billing</label>
-            <input
-              type="radio"
-              name="billingOption"
-              id="billingOptionMonthly"
-              checked
-            />
-
-            <input
-              type="radio"
-              name="billingOption"
-              id="billingOptionYearly"
-            />
+            <span class="BillingOptionToggler">
+              <input
+                type="radio"
+                name="billingOption"
+                id="billingOptionMonthly"
+                checked
+              />
+              <input
+                type="radio"
+                name="billingOption"
+                id="billingOptionYearly"
+              />
+              <span aria-hidden="true" class="BillingOptionTogglerTrack"></span>
+              <span aria-hidden="true" class="BillingOptionTogglerThumb"></span>
+            </span>
             <label for="billingOptionYearly">Yearly billing</label>
             <p>25% discount</p>
           </div>
